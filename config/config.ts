@@ -31,11 +31,11 @@ const plugins: IPlugin[] = [
       },
       pwa: pwa
         ? {
-            workboxPluginMode: 'InjectManifest',
-            workboxOptions: {
-              importWorkboxFrom: 'local',
-            },
-          }
+          workboxPluginMode: 'InjectManifest',
+          workboxOptions: {
+            importWorkboxFrom: 'local',
+          },
+        }
         : false, // default close dll, because issue https://github.com/ant-design/ant-design-pro/issues/4665
       // dll features https://webpack.js.org/plugins/dll-plugin/
       // dll: {
@@ -84,6 +84,7 @@ export default {
   devtool: isAntDesignProPreview ? 'source-map' : false,
   // umi routes: https://umijs.org/zh/guide/router.html
   routes: [
+    //user
     {
       path: '/user',
       component: '../layouts/UserLayout',
@@ -95,6 +96,7 @@ export default {
         },
       ],
     },
+    //app
     {
       path: '/',
       component: '../layouts/SecurityLayout',
@@ -115,6 +117,45 @@ export default {
               component: './Welcome',
             },
             {
+              path: '/dashboard',
+              name: 'dashboard',
+              icon: 'smile',
+              hideChildrenInMenu: false, //当前路由的子级在菜单中不展现
+              hideInMenu: false, //当前路由在菜单中不展现
+              hideInBreadcrumb: false, //当前路由在面包屑中不展现
+              routes: [
+                {
+                  path: '/dashboard/analysis',
+                  component: './dashboard/analyze',
+                  name: "analysis",
+                },
+                {
+                  path: '/dashboard/monitor/:props',
+                  component: './dashboard/monitor',
+                  name: "monitor",
+                },
+                {
+                  path: '/dashboard/workplace',
+                  component: './dashboard/workplace',
+                  name: "workplace",
+                }, {
+
+                }
+              ]
+            },
+            {
+              path: '/dynamic/:id',
+              name: 'dynamic',
+              icon: 'smile',
+              component: './dynamic/$index'
+            },
+            {
+              path: 'https://pro.ant.design/docs/getting-started-cn',
+              target: '_blank',
+              icon: 'smile',
+              name: 'Api'
+            },
+            {
               component: './404',
             },
           ],
@@ -124,7 +165,6 @@ export default {
         },
       ],
     },
-
     {
       component: './404',
     },

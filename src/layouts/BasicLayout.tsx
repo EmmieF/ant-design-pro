@@ -5,10 +5,10 @@
  */
 
 import ProLayout, {
-  MenuDataItem,
   BasicLayoutProps as ProLayoutProps,
   Settings,
 } from '@ant-design/pro-layout';
+import MenuDataItem from '../../mock/menuDataItem'
 import React, { useEffect } from 'react';
 import Link from 'umi/link';
 import { Dispatch } from 'redux';
@@ -125,8 +125,8 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
         return first ? (
           <Link to={paths.join('/')}>{route.breadcrumbName}</Link>
         ) : (
-          <span>{route.breadcrumbName}</span>
-        );
+            <span>{route.breadcrumbName}</span>
+          );
       }}
       footerRender={footerRender}
       menuDataRender={menuDataRender}

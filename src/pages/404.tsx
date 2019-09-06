@@ -18,4 +18,4 @@ const NoFoundPage: React.FC<{}> = () => (
   ></Result>
 );
 
-export default NoFoundPage;
+// export default NoFoundPage;

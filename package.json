@@ -23,7 +23,8 @@
     "start:no-mock": "cross-env MOCK=none umi dev",
     "test": "umi test",
     "test:all": "node ./tests/run-tests.js",
-    "test:component": "umi test ./src/components"
+    "test:component": "umi test ./src/components",
+    "add:block": "umi block add"
   },
   "husky": {
     "hooks": {
@@ -49,7 +50,7 @@
     "@antv/data-set": "^0.10.2",
     "antd": "^3.20.0",
     "classnames": "^2.2.6",
-    "dva": "^2.4.1",
+    "dva": "^2.5.0-beta.2",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
     "omit.js": "^1.0.2",

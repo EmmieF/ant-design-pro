@@ -1,7 +1,6 @@
 export default {
   'menu.welcome': '歡迎',
   'menu.more-blocks': '更多區塊',
-
   'menu.home': '首頁',
   'menu.login': '登錄',
   'menu.exception.403': '403',
@@ -48,4 +47,6 @@ export default {
   'menu.editor.flow': '流程編輯器',
   'menu.editor.mind': '腦圖編輯器',
   'menu.editor.koni': '拓撲編輯器',
+  'menu.Api': 'API',
+  'menu.dynamic': 'Dynamic'
 };

@@ -1,7 +1,6 @@
 export default {
   'menu.welcome': 'Welcome',
   'menu.more-blocks': 'More Blocks',
-
   'menu.home': 'Início',
   'menu.login': 'Login',
   'menu.register': 'Registro',
@@ -48,4 +47,6 @@ export default {
   'menu.editor.flow': 'Flow Editor',
   'menu.editor.mind': 'Mind Editor',
   'menu.editor.koni': 'Koni Editor',
+  'menu.Api': 'API',
+  'menu.dynamic': 'Dynamic'
 };
